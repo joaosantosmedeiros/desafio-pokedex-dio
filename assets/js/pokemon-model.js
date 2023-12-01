@@ -30,6 +30,12 @@ class Pokemon {
     this.satk = rawPokemon.stats[3].base_stat;
     this.sdef = rawPokemon.stats[4].base_stat;
     this.spd = rawPokemon.stats[5].base_stat;
-    this.abilities = rawPokemon.abilities.map(ability => ability.ability.name);
+    const abilitiesNames = rawPokemon.abilities.map(ability => ability.ability.name)
+    for (let i = 0; i < abilitiesNames.length; i++) {
+      const ability = abilitiesNames[i];
+      if(i < 2){
+        this.abilities.push(ability);
+      }
+    }
   }
 }
