@@ -30,10 +30,15 @@ pokeApi.getEntry = (id) => {
     .then(response => response.json())
     .then(response => {
       if (response.flavor_text_entries.length > 0) {
-        if (response.flavor_text_entries[0].flavor_text) {
-          return response.flavor_text_entries[0].flavor_text;
-        }
+        for (let i = 0; i < response.flavor_text_entries.length; i++) {
+          let entry = response.flavor_text_entries[i];
+          const entryVersion = entry.version.name;
+          const entryLanguage = entry.language.name;
+          if (entryLanguage == 'en' && ( entryVersion=='y' || entryVersion=='x' || entryVersion=='moon' || entryVersion=='sun' || entryVersion=='shield' || entryVersion=='sword'  || entryVersion=='scarlet' || entryVersion=='violet' || entryVersion=='legends-arceus')) {
+    return entry.flavor_text;
+  }
+}
       }
-        return '';
-      })
+return '';
+    })
 }
