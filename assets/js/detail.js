@@ -4,18 +4,16 @@ const body = document.querySelector('body')
 
 
 const loadPokemon = async () => {
-  const rawPokemon = await pokeApi.getPokemon(id)
+  const rawPokemon = await pokeApi.getPokemon(id);
+  const entry = await pokeApi.getEntry(id);
   const pokemon = new Pokemon(rawPokemon);
-  console.log(pokemon);
   body.classList.add(pokemon.type)
   body.innerHTML = `
   <header>
-  <div class="main-nav">
     <a class="back-link" href="index.html">
       <i class="ph ph-arrow-left"></i>
     </a>
     <h1 class="pokemon-name">${pokemon.name}</h1>
-  </div>
   <p>${pokemon.number < 100 ? (pokemon.number < 10 ? `#00${pokemon.number}`: `#0${pokemon.number}` ) : `#${pokemon.number}`}</p>
   </header>
   <section>
@@ -26,6 +24,7 @@ const loadPokemon = async () => {
     </ol>
     <div class="about">
       <p class="${pokemon.type}-color main">About</p>
+      <p class="entry">${entry}</p>
       <div class="metric">
         <div class="weight">
           <div class="metric-container flex">

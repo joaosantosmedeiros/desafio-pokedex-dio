@@ -7,14 +7,9 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 2rem;
   color: #fff;
-}
-
-header .main-nav {
-  display: flex;
-  align-items: center;
-  gap: .825rem;
 }
 
 header p {
@@ -34,6 +29,7 @@ header i {
 }
 
 .pokemon-name {
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 
@@ -51,9 +47,15 @@ section .pokemon-img {
   background-color: #fff;
   width: 97%;
   height: 80%;
-  margin: .225em;
+  margin: .225em .225em 0 ;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+}
+
+@media screen and (min-width: 700px) {
+  .data {
+    width: 99.5%;
+  }
 }
 
 .data .types {
@@ -73,30 +75,48 @@ section .pokemon-img {
   text-transform: capitalize;
 }
 
-.about {
-  height: 150px;
-}
-
 .main {
   text-align: center;
   font-weight: 700;
   font-size: 1.5em;
 }
 
+.about .entry {
+  text-align: center;
+  padding: 0 1em;
+  font-size: .825em;
+  color: #666;
+}
+
 .about .metric {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0 0em;
 }
 
+@media screen and (min-width: 700px) {
+  .about .metric {
+    gap: 4rem;
+  }
+}
 
 .height, .weight, .moves {
   color: #1D1D1D;
+  padding: .5rem .25rem;
 }
 
 .height {
   border-left: 1px solid #E0E0E0;
   border-right: 1px solid #E0E0E0;
+  padding: .5rem 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .height {
+    padding: .5rem 5rem;
+  }
 }
 
 .flex {
@@ -145,11 +165,23 @@ section .pokemon-img {
   margin-bottom: 2em;
 }
 
+@media screen and (min-width: 576px) {
+  .stats {
+    margin-top: 3em;
+  }
+}
+
 .stats-box{
   padding: 0 2em;
   display: flex;
   justify-content: center;
   gap: 2em;
+}
+
+@media screen and (min-width: 700px) {
+  .stats-box {
+    gap: 4em;
+  }
 }
 
 .move {
@@ -160,6 +192,7 @@ section .pokemon-img {
   text-align: right;
   margin: .25em 0;
 }
+
 .normal-color {
   color: #a6a877;
 }
