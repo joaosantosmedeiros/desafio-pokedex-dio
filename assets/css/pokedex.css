@@ -84,15 +84,15 @@
 }
 
 .pokemon .detail {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.pokemon .detail .types {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  .pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
   text-align: center;
 }
 
@@ -153,7 +153,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.pokemons a:hover {
   transform: scale(1.05);
   transition: all .25s;
 }

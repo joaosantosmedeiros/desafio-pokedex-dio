@@ -9,7 +9,7 @@ const loadMorePokemons = (offset, limit) => {
     const newHtml = pokemons.map(pokemon => `
     <a href="detail.html?id=${pokemon.number}">
       <li class="pokemon ${pokemon.type}">
-        <span class="number">${pokemon.number}</span>
+        <span class="number">${pokemon.number < 100 ? (pokemon.number < 10 ? `#00${pokemon.number}`: `#0${pokemon.number}` ) : `#${pokemon.number}`}</span>
         <span class="name">${pokemon.name}</span>
 
         <div class="detail" >
