@@ -1,0 +1,216 @@
+.detail {
+  display: grid;
+  grid-template-rows: .1fr 1fr;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: #fff;
+}
+
+header .main-nav {
+  display: flex;
+  align-items: center;
+  gap: .825rem;
+}
+
+header p {
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  color: #fff;
+  height: 32px;
+}
+
+header i {
+  display: flex;
+  font-size: 2em;
+  align-items: center;
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .pokemon-img {
+  height: 250px;
+}
+
+.data {
+  background-color: #fff;
+  width: 97%;
+  height: 80%;
+  margin: .225em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.data .types {
+  padding: 0;
+  margin: 1.5em 0 3em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.data .types li {
+  list-style: none;
+  padding: .25em .75em;
+  border-radius: 1em;
+  color: #fff;
+  filter: brightness(1.1);
+  text-transform: capitalize;
+}
+
+.about {
+  height: 150px;
+}
+
+.main {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.about .metric {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 0em;
+}
+
+
+.height, .weight, .moves {
+  color: #1D1D1D;
+}
+
+.height {
+  border-left: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+
+.flex {
+  display: flex;
+}
+
+.metric-container {
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  height: 80%;
+  display: flex;
+}
+
+.moves-names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric div .identifier {
+  margin-top: 1em;
+  color: #666;
+  font-size: .65em;
+}
+
+.height p,
+.weight p,
+.moves p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .825em;
+  font-weight: 400;
+}
+
+.metric div i {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.stats {
+  margin-bottom: 2em;
+}
+
+.stats-box{
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.move {
+  text-transform: capitalize;
+}
+
+.stat-column p {
+  text-align: right;
+  margin: .25em 0;
+}
+.normal-color {
+  color: #a6a877;
+}
+.grass-color {
+  color: #77c850;
+}
+.fire-color {
+  color: #ee7f30;
+}
+.water-color {
+  color: #678fee;
+}
+.electric-color {
+  color: #f7cf2e;
+}
+.ice-color {
+  color: #98d5d7;
+}
+.ground-color {
+  color: #dfbf69;
+}
+.flying-color {
+  color: #a98ff0;
+}
+.poison-color {
+  color: #a040a0;
+}
+.fighting-color -color {
+  color: #bf3029;
+}
+.psychic-color {
+  color: #f65687;
+}
+.dark-color {
+  color: #725847;
+}
+.rock-color {
+  color: #b8a137;
+}
+.bug-color {
+  color: #a8b720;
+}
+.ghost-color {
+  color: #6e5896;
+}
+.steel-color {
+  color: #b9b7cf;
+}
+.dragon-color {
+  color: #6f38f6;
+}
+.fairy-color {
+  color: #f9aec7;
+}
