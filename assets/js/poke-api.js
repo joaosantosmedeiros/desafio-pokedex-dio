@@ -19,7 +19,21 @@ pokeApi.getPokemons = (offset, limit) => {
 pokeApi.getPokemon = (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   return fetch(url)
-  .then(response => response.json())
-  .then(responseBody => responseBody)
-  .catch(console.log)
+    .then(response => response.json())
+    .then(responseBody => responseBody)
+    .catch(console.log)
+}
+
+pokeApi.getEntry = (id) => {
+  const url = `https://pokeapi.co/api/v2/pokemon-species/${id}`;
+  return fetch(url)
+    .then(response => response.json())
+    .then(response => {
+      if (response.flavor_text_entries.length > 0) {
+        if (response.flavor_text_entries[0].flavor_text) {
+          return response.flavor_text_entries[0].flavor_text;
+        }
+      }
+        return '';
+      })
 }
